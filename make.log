@@ -1,0 +1,71 @@
+cd src && make
+make[1]: Entering directory '/home/socash/src/exix/src'
+ar -rcs kernel_generic.a common.o
+make[1]: Leaving directory '/home/socash/src/exix/src'
+cd src && make i386-build
+make[1]: Entering directory '/home/socash/src/exix/src'
+cd i386 && make
+make[2]: Entering directory '/home/socash/src/exix/src/i386'
+ld -Tlink.ld -melf_i386 -o kernel.bin boot.o descriptor_tables.o entry_point.o io_port.o ../kernel_generic.a
+descriptor_tables.o: In function `init_gdt':
+/home/socash/src/exix/src/i386/descriptor_tables.c:39: undefined reference to `stack_hold'
+/home/socash/src/exix/src/i386/descriptor_tables.c:43: undefined reference to `gdt_flush'
+descriptor_tables.o: In function `init_idt':
+/home/socash/src/exix/src/i386/descriptor_tables.c:76: undefined reference to `isr0'
+/home/socash/src/exix/src/i386/descriptor_tables.c:77: undefined reference to `isr1'
+/home/socash/src/exix/src/i386/descriptor_tables.c:78: undefined reference to `isr2'
+/home/socash/src/exix/src/i386/descriptor_tables.c:79: undefined reference to `isr3'
+/home/socash/src/exix/src/i386/descriptor_tables.c:80: undefined reference to `isr4'
+/home/socash/src/exix/src/i386/descriptor_tables.c:81: undefined reference to `isr5'
+/home/socash/src/exix/src/i386/descriptor_tables.c:82: undefined reference to `isr6'
+/home/socash/src/exix/src/i386/descriptor_tables.c:83: undefined reference to `isr7'
+/home/socash/src/exix/src/i386/descriptor_tables.c:84: undefined reference to `isr8'
+/home/socash/src/exix/src/i386/descriptor_tables.c:85: undefined reference to `isr9'
+/home/socash/src/exix/src/i386/descriptor_tables.c:86: undefined reference to `isr10'
+/home/socash/src/exix/src/i386/descriptor_tables.c:87: undefined reference to `isr11'
+/home/socash/src/exix/src/i386/descriptor_tables.c:88: undefined reference to `isr12'
+/home/socash/src/exix/src/i386/descriptor_tables.c:89: undefined reference to `isr13'
+/home/socash/src/exix/src/i386/descriptor_tables.c:90: undefined reference to `isr14'
+/home/socash/src/exix/src/i386/descriptor_tables.c:91: undefined reference to `isr15'
+/home/socash/src/exix/src/i386/descriptor_tables.c:92: undefined reference to `isr16'
+/home/socash/src/exix/src/i386/descriptor_tables.c:93: undefined reference to `isr17'
+/home/socash/src/exix/src/i386/descriptor_tables.c:94: undefined reference to `isr18'
+/home/socash/src/exix/src/i386/descriptor_tables.c:95: undefined reference to `isr19'
+/home/socash/src/exix/src/i386/descriptor_tables.c:96: undefined reference to `isr20'
+/home/socash/src/exix/src/i386/descriptor_tables.c:97: undefined reference to `isr21'
+/home/socash/src/exix/src/i386/descriptor_tables.c:98: undefined reference to `isr22'
+/home/socash/src/exix/src/i386/descriptor_tables.c:99: undefined reference to `isr23'
+/home/socash/src/exix/src/i386/descriptor_tables.c:100: undefined reference to `isr24'
+/home/socash/src/exix/src/i386/descriptor_tables.c:101: undefined reference to `isr25'
+/home/socash/src/exix/src/i386/descriptor_tables.c:102: undefined reference to `isr26'
+/home/socash/src/exix/src/i386/descriptor_tables.c:103: undefined reference to `isr27'
+/home/socash/src/exix/src/i386/descriptor_tables.c:104: undefined reference to `isr28'
+/home/socash/src/exix/src/i386/descriptor_tables.c:105: undefined reference to `isr29'
+/home/socash/src/exix/src/i386/descriptor_tables.c:106: undefined reference to `isr30'
+/home/socash/src/exix/src/i386/descriptor_tables.c:107: undefined reference to `isr31'
+/home/socash/src/exix/src/i386/descriptor_tables.c:108: undefined reference to `isr0x80'
+/home/socash/src/exix/src/i386/descriptor_tables.c:109: undefined reference to `irq0'
+/home/socash/src/exix/src/i386/descriptor_tables.c:110: undefined reference to `irq1'
+/home/socash/src/exix/src/i386/descriptor_tables.c:111: undefined reference to `irq2'
+/home/socash/src/exix/src/i386/descriptor_tables.c:112: undefined reference to `irq3'
+/home/socash/src/exix/src/i386/descriptor_tables.c:113: undefined reference to `irq4'
+/home/socash/src/exix/src/i386/descriptor_tables.c:114: undefined reference to `irq5'
+/home/socash/src/exix/src/i386/descriptor_tables.c:115: undefined reference to `irq6'
+/home/socash/src/exix/src/i386/descriptor_tables.c:116: undefined reference to `irq7'
+/home/socash/src/exix/src/i386/descriptor_tables.c:117: undefined reference to `irq8'
+/home/socash/src/exix/src/i386/descriptor_tables.c:118: undefined reference to `irq9'
+/home/socash/src/exix/src/i386/descriptor_tables.c:119: undefined reference to `irq10'
+/home/socash/src/exix/src/i386/descriptor_tables.c:120: undefined reference to `irq11'
+/home/socash/src/exix/src/i386/descriptor_tables.c:121: undefined reference to `irq12'
+/home/socash/src/exix/src/i386/descriptor_tables.c:122: undefined reference to `irq13'
+/home/socash/src/exix/src/i386/descriptor_tables.c:123: undefined reference to `irq14'
+/home/socash/src/exix/src/i386/descriptor_tables.c:124: undefined reference to `irq15'
+/home/socash/src/exix/src/i386/descriptor_tables.c:126: undefined reference to `idt_flush'
+makefile:14: recipe for target 'link' failed
+make[2]: *** [link] Error 1
+make[2]: Leaving directory '/home/socash/src/exix/src/i386'
+makefile:16: recipe for target 'i386-build' failed
+make[1]: *** [i386-build] Error 2
+make[1]: Leaving directory '/home/socash/src/exix/src'
+makefile:8: recipe for target 'i386' failed
+make: *** [i386] Error 2
