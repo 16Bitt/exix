@@ -4,7 +4,6 @@
 char* hello_string = "Hello, world";
 
 void exix_main(){
-	memset((void*) 0xB8000, 0xA5, 80 * 25 * 2);
 	int i;
 	for(i = 0; i < strlen(hello_string); i++)
 		((char*) 0xB8000)[i * 2] = hello_string[i];

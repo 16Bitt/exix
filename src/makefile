@@ -1,5 +1,5 @@
 SOURCES	= $(patsubst %.c,%.o,$(wildcard *.c))
-CFLAGS	= -nostdlib -nostdinc -fno-builtin -fno-stack-protector -I../include/ -I. -g -Werror
+CFLAGS	= -nostdlib -nostdinc -fno-builtin -fno-stack-protector -I../include/ -I. -g -Werror -m32
 TARGET	= kernel_generic.a
 AR	= ar
 ARFLAGS	= -rcs
